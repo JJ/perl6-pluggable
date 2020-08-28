@@ -4,13 +4,14 @@ use lib 't/lib';
 use Pluggable;
 use Test;
 
-plan 4;
+plan 5;
 
 # simple case, load two plugins with defaults
 class CaseA does Pluggable {
     has @.expected = [
             'CaseA::Plugins::Class1',
             'CaseA::Plugins::Class2',
+	    'CaseA::Plugins::Class3'
         ];
 
     method test() {
